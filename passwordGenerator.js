@@ -66,6 +66,10 @@ function changeVocals (str) {
   
   function removeSpaces (str) {
     //code di sini
+    if(str.length<=5)
+    {
+        return 'Minimal karakter yang diinputkan adalah 5 karakter'
+    }
     var simpan=''
     for (var i = 0; i < str.length; i++) {
         if(str[i]==' ')
@@ -87,11 +91,7 @@ function changeVocals (str) {
   
   function passwordGenerator (name) {
     //code di sini
-    var gantiVocal=changeVocals(name)
-    var balikKata=reverseWord(gantiVocal)
-    var salingBalik=setLowerUpperCase(balikKata)
-    var hapusSpasi=removeSpaces(salingBalik)
-    return hapusSpasi
+    return removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))))
   }
   
   console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
