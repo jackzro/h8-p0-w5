@@ -66,7 +66,7 @@ function changeVocals (str) {
   
   function removeSpaces (str) {
     //code di sini
-    if(str.length<=5)
+    if(str.length<5)
     {
         return 'Minimal karakter yang diinputkan adalah 5 karakter'
     }
